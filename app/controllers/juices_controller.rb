@@ -15,20 +15,19 @@ class JuicesController < ApplicationController
 
   # POST /juices
   def create
-    decoded_jwt = decode_token(bearer_token)
-
     juicehash = {
       title: juice_params[:title],
       ingredients: juice_params[:ingredients],
       notes: juice_params[:notes],
-      tag: juice_params[:tag],
-      user_id: decoded_jwt[0]['user']['id']
+      tag_ingredients: juice_params[:tag_ingredients],
+      tag_type: juice_params[:tag_type],
+      tag_flavor: juice_params[:tag_flavor],
+      user_id: juice_params[:user_id]
     }
 
     @juice = Juice.new(juicehash)
 
     if @juice.save
-
       render json: { status: 201, juice: @juice }
     else
       render json: { status: 422, juice: @juice }
@@ -58,6 +57,6 @@ class JuicesController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def juice_params
-      params.require(:juice).permit(:title, :ingredients, :notes, :tag, :user_id)
+      params.require(:juice).permit(:title, :ingredients, :notes, :tag_ingredients, :tag_type, :tag_flavor, :user_id)
     end
 end
