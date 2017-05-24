@@ -5,3 +5,39 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+User.create(
+  username: 'dwithad',
+  password: '123456',
+  display: 'dave'
+)
+
+User.create(
+  username: 'jwithaj',
+  password: '123456',
+  display: 'jean'
+)
+
+Juice.create(
+  title: 'Green Juice',
+  ingredients: 'Kale, spinach, apple',
+  notes: 'Good for you!',
+  tag: ['Fruit','Veggie','Green'],
+  user_id: 1
+)
+
+Juice.create(
+  title: 'Red Juice',
+  ingredients: 'Red Apple, Strawberry',
+  notes: 'Red and good for you!',
+  tag: ['Fruit','Berry'],
+  user_id: 1
+)
+
+Juice.create(
+  title: 'Orange Juice',
+  ingredients: 'Oranges',
+  notes: 'Vitamin C!',
+  tag: ['Fruit','Citrus'],
+  user_id: 2
+)
