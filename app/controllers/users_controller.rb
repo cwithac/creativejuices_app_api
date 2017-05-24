@@ -10,7 +10,7 @@ class UsersController < ApplicationController
         # generate a JWT to keep them in session
         token = create_token(user.id, user.username)
         # send a success response to server
-        render json: {status: 200, user: user}
+        render json: {status: 200, token: token, user: user}
       else
         # send a fail response to server
         render json: {status: 401, message: "Unauthorized"}
@@ -62,27 +62,27 @@ class UsersController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def user_params
-      params.require(:user).permit(:username, :password-digest)
+      params.require(:user).permit(:username, :password_digest)
     end
 
     # JWT is how we use use the jwt gem. JWT.encode is a method within the jwt gem. It will encode / generate a JSON Web Token for us. A token has a header, a payload, and a signature. These are the three arguments that we pass to the JWT.encode method.
 
-    def token(id, username)
+    def create_token(id, username)
       JWT.encode(payload(id, username), ENV['JWT_SECRET'], 'HS256')
     end
 
     # Our create_token method is calling on another method called payload that we will write. All this method does is return an object (or hash) that includes our user's info.
 
     def payload(id, username)
-   {
-     exp: (Time.now + 30.minutes).to_i,
-     iat: Time.now.to_i,
-     iss: ENV['JWT_ISSUER'],
-     user: {
-       id: id,
-       username: username
-     }
-   }
+      {
+        exp: (Time.now + 30.minutes).to_i,
+        iat: Time.now.to_i,
+        iss: ENV['JWT_ISSUER'],
+        user: {
+          id: id,
+          username: username
+        }
+      }
     end
 
 end
