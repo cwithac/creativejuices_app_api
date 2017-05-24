@@ -7,22 +7,30 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 User.create(
+  username: 'cwithac',
+  password: '123456',
+  display: 'Cathleen'
+)
+
+User.create(
   username: 'dwithad',
   password: '123456',
-  display: 'dave'
+  display: 'Dave'
 )
 
 User.create(
   username: 'jwithaj',
   password: '123456',
-  display: 'jean'
+  display: 'Jean'
 )
 
 Juice.create(
   title: 'Green Juice',
   ingredients: 'Kale, spinach, apple',
   notes: 'Good for you!',
-  tag: ['Fruit','Veggie','Green'],
+  tag_ingredients: 'Mixed Fruit/Veggie',
+  tag_type: 'Green',
+  tag_flavor: 'Mild',
   user_id: 1
 )
 
@@ -30,7 +38,9 @@ Juice.create(
   title: 'Red Juice',
   ingredients: 'Red Apple, Strawberry',
   notes: 'Red and good for you!',
-  tag: ['Fruit','Berry'],
+  tag_ingredients: 'Fruit',
+  tag_type: 'Berry',
+  tag_flavor: 'Sweet',
   user_id: 1
 )
 
@@ -38,6 +48,8 @@ Juice.create(
   title: 'Orange Juice',
   ingredients: 'Oranges',
   notes: 'Vitamin C!',
-  tag: ['Fruit','Citrus'],
+  tag_ingredients: 'Mixed Fruit/Veggie',
+  tag_type: 'Citrus',
+  tag_flavor: 'Sweet',
   user_id: 2
 )
