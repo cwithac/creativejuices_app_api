@@ -33,7 +33,7 @@ class UsersController < ApplicationController
 
   # POST /users
   def create
-    @user = User.new(user_params)
+    @user = User.new(username:params[:user][:username], password:params[:user][:password], display:params[:user][:display])
 
     if @user.save
       render json: @user, status: :created, location: @user
@@ -64,7 +64,7 @@ class UsersController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def user_params
-      params.require(:user).permit(:username, :password_digest)
+      params.require(:user).permit(:username, :password_digest, :display)
     end
 
     # JWT is how we use use the jwt gem. JWT.encode is a method within the jwt gem. It will encode / generate a JSON Web Token for us. A token has a header, a payload, and a signature. These are the three arguments that we pass to the JWT.encode method.
