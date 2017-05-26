@@ -15,6 +15,9 @@ class JuicesController < ApplicationController
 
   # POST /juices
   def create
+
+    decoded_jwt = decode_token(bearer_token)
+
     juicehash = {
       title: juice_params[:title],
       ingredients: juice_params[:ingredients],
@@ -22,7 +25,7 @@ class JuicesController < ApplicationController
       tag_ingredients: juice_params[:tag_ingredients],
       tag_type: juice_params[:tag_type],
       tag_flavor: juice_params[:tag_flavor],
-      user_id: juice_params[:user_id]
+      user_id: decoded_jwt[0]['user']['id']
     }
 
     @juice = Juice.new(juicehash)
