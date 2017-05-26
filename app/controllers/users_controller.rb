@@ -36,9 +36,9 @@ class UsersController < ApplicationController
     @user = User.new(username:params[:user][:username], password:params[:user][:password], display:params[:user][:display])
 
     if @user.save
-      render json: @user, status: :created, location: @user
+      render json: {status: 201, user: @user}
     else
-      render json: @user.errors, status: :unprocessable_entity
+      render json: {status: 422, user: @user}
     end
   end
 
