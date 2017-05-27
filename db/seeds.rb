@@ -26,9 +26,9 @@ User.create(
 
 Juice.create(
   title: 'Green Juice',
-  ingredients: 'Kale, spinach, apple',
+  ingredients: 'Kale, spinach, parsley',
   notes: 'Good for you!',
-  tag_ingredients: 'Mixed Fruit/Veggie',
+  tag_ingredients: 'Veggie',
   tag_type: 'Green',
   tag_flavor: 'Mild',
   user_id: 1
