@@ -48,7 +48,7 @@ Juice.create(
   title: 'Orange Juice',
   ingredients: 'Oranges',
   notes: 'Vitamin C!',
-  tag_ingredients: 'Mixed Fruit/Veggie',
+  tag_ingredients: 'Mixed',
   tag_type: 'Citrus',
   tag_flavor: 'Sweet',
   user_id: 2
