@@ -11,7 +11,7 @@ require "rack/cors"
 Rails.application.config.middleware.insert_before 0, Rack::Cors do
 
   allow do
-    origins 'https://creative-juices.herokuapp.com/'
+    origins 'https://creative-juices.herokuapp.com'
 
     resource '*',
       headers: :any,
