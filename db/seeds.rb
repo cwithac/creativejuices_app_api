@@ -190,7 +190,7 @@ Juice.create(
 Juice.create(
   title: 'Pineapple and Kale Juice',
   ingredients: '1/4 Pineapple, 4 Kale leaves, 4 Swiss chard leaves, 1 Lime',
-  notes: 'Peel, core and cut into pieces the ripe pineapple. Wash the kale and swiss chard leaves and slip them between the pineapple pieces. Add the peeled lime. Juice them together. Enjoy!!'
+  notes: 'Peel, core and cut into pieces the ripe pineapple. Wash the kale and swiss chard leaves and slip them between the pineapple pieces. Add the peeled lime. Juice them together. Enjoy!!',
   tag_ingredients: 'Mixed',
   tag_type: 'Green',
   tag_flavor: 'Sweet',
