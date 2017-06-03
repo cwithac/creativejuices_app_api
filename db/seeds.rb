@@ -6,23 +6,25 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+
 User.create(
-  username: 'cwithac',
-  password: '123456',
-  display: 'Cathleen'
+  username: 'guest',
+  password: 'guest123',
+  display: 'Guest User'
 )
 
 User.create(
-  username: 'dwithad',
-  password: '123456',
-  display: 'Dave'
+  username: 'superjuicer',
+  password: 'sj123456',
+  display: 'Super Juicer'
 )
 
 User.create(
-  username: 'jwithaj',
+  username: 'ilovejuice',
   password: '123456',
-  display: 'Jean'
+  display: 'Kristyn'
 )
+
 
 Juice.create(
   title: 'Anti-Inflammatory Juice',
@@ -145,11 +147,52 @@ Juice.create(
 )
 
 Juice.create(
-  title: 'Grand Daddy Purple Juice',
+  title: 'Hot Pink Beautifying Juice',
   ingredients: '2 beets, 3 carrots, 1 lemon, 1 apple, 5 kale leaves, 4 stalks celery, 1 inch ginger',
   notes: 'Throw all ingredients in a juicer and juice!',
   tag_ingredients: 'Mixed',
   tag_type: 'Root',
   tag_flavor: 'Mild',
   user_id: 1
+)
+
+Juice.create(
+  title: 'Immunity Boosting Juice',
+  ingredients: '1 medium bunch of celery (or one package of celery hearts), 1 Fuji apple (or other bold, sweet and crispy apple of choice), 1/2 of a lime, 1 cup spinach, 1 cup kale, 1 piece of fresh ginger (about the size of a gum ball)',
+  notes: '1.Start with fresh, chilled fruits and vegetables. 2. Clean and trim the celery. 3.Cut, core and slice the apple. 4.Rinse the spinach and kale and roughly chop if necessary. 5.Cut the ginger to the appropriate size for the recipe and peel if the skin is thick or wilted.6.Process all ingredients in a juicer. 7.Use the celery and apple slices to help the leafy greens descend into the juicer if needed. 8.If you have a citrus press, you may choose to juice the lime using that and then stir the lime juice into the juice blend, or you can simply peel the lime and send it through the juicer with the rest of the ingredients. 9.Stir in a few ice cubes with the finished juice blend and enjoy a revitalizing treat.',
+  tag_ingredients: 'Veggie',
+  tag_type: 'Green',
+  tag_flavor: 'Mild',
+  user_id: 3
+)
+
+Juice.create(
+  title: 'Migraine Reliever Juice Recipie',
+  ingredients: '1/2 pineapple, 3-4 leaves kale or a bunch of spinach, 1 stick of celery, 1/4 lemon, 1/2 inch ginger root (optional)',
+  notes: 'Also drinks lots of water!',
+  tag_ingredients: 'Mixed',
+  tag_type: 'Green',
+  tag_flavor: 'Mild',
+  user_id: 3
+)
+
+
+Juice.create(
+  title: 'Orange Carrot Ginger Juice Recipe',
+  ingredients: '6 carrots, 1 orange, 1 knob ginger, 1 cucumber',
+  notes: 'Add all ingredients to vegetable juicer. Gently stir juice and consume immediately.',
+  tag_ingredients: 'Mixed',
+  tag_type: 'Citrus',
+  tag_flavor: 'Sweet',
+  user_id: 1
+)
+
+Juice.create(
+  title: 'Pineapple and Kale Juice',
+  ingredients: '1/4 Pineapple, 4 Kale leaves, 4 Swiss chard leaves, 1 Lime',
+  notes: 'Peel, core and cut into pieces the ripe pineapple. Wash the kale and swiss chard leaves and slip them between the pineapple pieces. Add the peeled lime. Juice them together. Enjoy!!'
+  tag_ingredients: 'Mixed',
+  tag_type: 'Green',
+  tag_flavor: 'Sweet',
+  user_id: 2
 )
