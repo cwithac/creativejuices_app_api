@@ -1,24 +1,35 @@
-# README
+# Creative Juices
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+#### Front End: [Hosted on Heroku](https://creative-juices.herokuapp.com/) + [gitHub Repository](https://github.com/cwithac/creativejuices_app_frontend)
 
-Things you may want to cover:
+#### Back End: [Hosted on Heroku](https://creative-juices-api.herokuapp.com/) + [gitHub Repository](https://github.com/cwithac/creativejuices_app_api)
 
-* Ruby version
+![](http://i.imgur.com/3FdDBUr.png)
 
-* System dependencies
+_A little help for a lot a health! Search through the database of juices to fit your personal taste. Do you like fruity? What about citrus, or spicy? Filter the options to narrow down the list and explore a database of juicing recipes. Register for an account for full access including management of your personally curated list._
 
-* Configuration
+**Guest Sign In**:  username: _guest_ | password: _guest123_
 
-* Database creation
+### Technologies Used
 
-* Database initialization
+```
++ Rails 5, Ruby
++ PostgresQL DB, JSON API > One to Many Relationship: Users + Juices
++ Javascript Web Token
++ Express, AngularJS, Node
++ HTML, Javascript, jQuery
++ CSS Responsive Design
++ RESTful Routes (Full: Juice, Partial: User)
+```
 
-* How to run the test suite
+### Upcoming Features
++ Administrator users
++ Additional data validation
++ Additional login validation
 
-* Services (job queues, cache servers, search engines, etc.)
+### Resources
++ [Seed Data](https://draxe.com/juicing-recipes/)
++ [Images via pixabay](https://pixabay.com/)
 
-* Deployment instructions
 
-* ...
+[General Assembly](https://generalassemb.ly/), 2017
