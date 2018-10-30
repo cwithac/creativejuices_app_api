@@ -23,6 +23,10 @@ gem 'jwt'
 # dotnev --> to set Environment Variables for use in our JSON Web Tokens
 gem 'dotenv-rails', '~> 2.1', '>= 2.1.1'
 
+# Datadog APM
+source 'https://rubygems.org'
+gem 'ddtrace'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
