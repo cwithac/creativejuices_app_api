@@ -1,9 +1,6 @@
 class JuicesController < ApplicationController
   before_action :set_juice, only: [:show, :update, :destroy]
 
-  require 'ddtrace'
-  Datadog.configure do |c|
-
   # GET /juices
   def index
     @juices = Juice.all
@@ -65,5 +62,4 @@ class JuicesController < ApplicationController
     def juice_params
       params.require(:juice).permit(:title, :ingredients, :notes, :tag_ingredients, :tag_type, :tag_flavor, :user_id)
     end
-end
 end
