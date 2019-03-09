@@ -2,5 +2,6 @@
 
 require 'ddtrace'
 Datadog.configure do |c|
-  c.use :rails, service_name: 'creativejuices'
+  # This will activate auto-instrumentation for Rails
+  c.use :rails
 end
